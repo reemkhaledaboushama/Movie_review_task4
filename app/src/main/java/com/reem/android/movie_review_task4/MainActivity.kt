@@ -9,5 +9,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         println("hello team i think my github is finally working! yay :)")
         print("Hi")
+        print("aaadad")
     }
 }
