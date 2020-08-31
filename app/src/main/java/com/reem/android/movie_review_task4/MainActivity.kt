@@ -8,5 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         println("hello team i think my github is finally working! yay :)")
+        print("Hi")
     }
 }
