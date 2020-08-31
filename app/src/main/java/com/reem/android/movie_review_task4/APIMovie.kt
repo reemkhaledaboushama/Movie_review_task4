@@ -10,7 +10,6 @@ interface APIMovie {
 
     @GET("popular?")
     fun getMovie(
-        @Query("q") cityName: String,
         @Query("api_key") apiKey: String,
         @Query("language") lang: String,
         @Query("page") page: Int
