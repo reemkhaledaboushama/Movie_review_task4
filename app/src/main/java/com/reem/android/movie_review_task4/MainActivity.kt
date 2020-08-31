@@ -12,6 +12,6 @@ class MainActivity : AppCompatActivity() {
         print("aaadad")
         print("Hello this is me yomnaaaaaaaaaaaaaaaaa")
         print("helloo")
-        print("7asby allah wan3m 2l wakyl")
+        print("koronba")
     }
 }
