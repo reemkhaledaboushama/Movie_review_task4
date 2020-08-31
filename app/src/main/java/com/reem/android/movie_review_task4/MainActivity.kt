@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         println("hello team i think my github is finally working! yay :)")
         print("Hi")
         print("aaadad")
-
+        print("Hello this is me yomnaaaaaaaaaaaaaaaaa")
         print("helloo")
     }
 }
