@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         api
             .getMovie( apiKey,"en",1)
             .enqueue(object : Callback<Movie> {
-                override fun onResponse( call: Call<Movie>, response: Response<Movie>) {}
+                override fun onResponse( call: Call<Movie>, response: Response<Movie>) {
+
+
+                }
                 override fun onFailure(call: Call<Movie>, t: Throwable) {
 
                 }
