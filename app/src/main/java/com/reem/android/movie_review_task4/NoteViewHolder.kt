@@ -6,11 +6,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.movie_item.view.*
 import kotlinx.android.synthetic.main.movie_item.view.*
+import kotlinx.android.synthetic.main.screen_twoo.view.*
 
 class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val movieImage : ImageView = itemView.movie_image
-    val movieName : TextView = itemView.movie_name
-    val movieYear : TextView = itemView.movie_year
+    val movieImage : ImageView = itemView.movieposter
+    val movieName : TextView = itemView.moviename
+    val movierating : TextView = itemView.rating
+    val moviegenre: TextView=itemView.genre
 
 }
