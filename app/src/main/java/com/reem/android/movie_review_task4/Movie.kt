@@ -1,10 +1,35 @@
 package com.reem.android.movie_review_task4
 
-data class Movie (val popularity :Double,
-                  val poster_path: String,
-                  val adult :Boolean,
-                  val original_language :String = "en",
-                  val original_title :String ,
-                  val title :String,
-                  val overview :String ,
-                  val release_date : String)
+import com.google.gson.annotations.SerializedName
+
+data class Movie (
+    @SerializedName("results")
+    val results: List<Res>
+)
+
+
+data class Res (
+    @SerializedName("popularity")
+    val popularity: Double,
+
+    @SerializedName("poster_path")
+    val poster_path: String,
+
+    @SerializedName("adult")
+    val adult: Boolean,
+
+    @SerializedName ("original_language")
+    val original_language: String = "en",
+
+    @SerializedName("original_title")
+    val original_title: String,
+
+    @SerializedName("title")
+    val title: String,
+
+    @SerializedName ("overview")
+    val overview: String,
+
+    @SerializedName("release_date")
+    val release_date: String
+)
