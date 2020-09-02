@@ -9,7 +9,7 @@ class NotesAdapter(private val notesList: List<Note>) : RecyclerView.Adapter<Not
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
 
         val layoutInflater = LayoutInflater.from(parent.context)
-        val noteView = layoutInflater.inflate(R.layout.note_item , parent , false)
+        val noteView = layoutInflater.inflate(R.layout.movie_item , parent , false)
         return NoteViewHolder(noteView)
     }
 

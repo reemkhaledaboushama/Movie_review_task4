@@ -4,9 +4,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.note_item.view.*
-import kotlinx.android.synthetic.main.note_item.view.*
-import kotlinx.android.synthetic.main.note_item.view.*
+import kotlinx.android.synthetic.main.movie_item.view.*
+import kotlinx.android.synthetic.main.movie_item.view.*
 
 class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
