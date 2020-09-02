@@ -15,14 +15,14 @@ class ScreenTwo : AppCompatActivity() {
 
 
     lateinit var recyclerView: RecyclerView
-    lateinit var recyclerAdapter: NotesAdapter
+    lateinit var recyclerAdapter: MovieAdapter
     private val apiKey = "d78d306988042530d99e166c3cb00017"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.screen_two)
         recyclerView = findViewById(R.id.main_recycler)
-        recyclerAdapter = NotesAdapter(this)
+        recyclerAdapter = MovieAdapter(this)
         main_recycler.layoutManager = GridLayoutManager(this, 2)
         main_recycler.adapter = recyclerAdapter
         main_recycler.setHasFixedSize(true)

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class NotesAdapter(val context: Context) : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter(val context: Context) : RecyclerView.Adapter<MovieViewHolder>() {
 
     var movieList : List<Movie> = listOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
@@ -29,7 +29,7 @@ class NotesAdapter(val context: Context) : RecyclerView.Adapter<MovieViewHolder>
             //.into(holder.image)
     }
     fun setMovieListItems(movieList: List<Movie>){
-        this.movieList = movieList;
+        this.movieList = movieList
         notifyDataSetChanged()
     }
 
