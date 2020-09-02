@@ -5,40 +5,55 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.screen_two.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ScreenTwo : AppCompatActivity() {
+
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var recyclerAdapter: NotesAdapter
+    private val apiKey = "d78d306988042530d99e166c3cb00017"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.screen_two)
-        //main_recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerView = findViewById(R.id.main_recycler)
+        recyclerAdapter = NotesAdapter(this)
         main_recycler.layoutManager = GridLayoutManager(this, 2)
-        main_recycler.adapter = NotesAdapter(getNotes())
-
-        val back: Button= findViewById(R.id.back)
-        back.setOnClickListener{
-            val intent = Intent(this, ScreenOne::class.java)
+        main_recycler.adapter = recyclerAdapter
+        main_recycler.setHasFixedSize(true)
+        val back: Button = findViewById(R.id.back)
+        back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            val apiInterface = APIMovie.create().getMovie(apiKey,"en-US",1)
+
+
+            apiInterface.enqueue( object : Callback<List<Movie>>{
+                override fun onResponse(call: Call<List<Movie>>?, response: Response<List<Movie>>?) {
+
+                    if(response?.body() != null)
+                        recyclerAdapter.setMovieListItems(response.body()!!)
+                }
+
+                override fun onFailure(call: Call<List<Movie>>?, t: Throwable?) {
+
+                }
+            })
+
 
         }
-    }
 
-    private fun getNotes(): List<Note> {
-        val noteList = ArrayList<Note>()
-        noteList.add(Note(R.drawable.fast1, "The Fast and the Furious", "2001"))
-        noteList.add(Note(R.drawable.fast1, "2 Fast 2 Furious", "2003"))
-        noteList.add(Note(R.drawable.fast1, "Turbo-Charged Prelude", "2003"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious: Tokyo Drift", "2006"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious 4", "2009"))
-        noteList.add(Note(R.drawable.fast1, "Los Bandoleros", "2009"))
-        noteList.add(Note(R.drawable.fast1, "Fast Five", "2011"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious 6", "2013"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious 7", "2105"))
-        noteList.add(Note(R.drawable.fast1, "The Fate of the Furious", "2017"))
-        noteList.add(Note(R.drawable.fast1, "Hobbs and Shaw", "2019"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious 9", "2021"))
-        noteList.add(Note(R.drawable.fast1, "Fast and Furious 10", "2022"))
-        return noteList
 
     }
-}
+
+
+
+
+    }
+
+
