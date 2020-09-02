@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val apiKey = "d78d306988042530d99e166c3cb00017"
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.screen_one)
         api
             .getMovie( apiKey,"en",1)
             .enqueue(object : Callback<Movie> {
