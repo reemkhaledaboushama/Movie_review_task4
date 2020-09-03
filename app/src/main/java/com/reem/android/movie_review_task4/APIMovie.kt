@@ -21,7 +21,7 @@ interface APIMovie {
 
         var BASE_URL = "https://api.themoviedb.org/3/movie/"
 
-        fun create() : APIMovie {
+        fun create(): APIMovie {
 
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

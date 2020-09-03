@@ -2,13 +2,13 @@ package com.reem.android.movie_review_task4
 
 import com.google.gson.annotations.SerializedName
 
-data class Movie (
+data class Movie(
     @SerializedName("results")
     val results: List<Res>
 )
 
 
-data class Res (
+data class Res(
     @SerializedName("popularity")
     val popularity: Double,
 
@@ -18,7 +18,7 @@ data class Res (
     @SerializedName("adult")
     val adult: Boolean,
 
-    @SerializedName ("original_language")
+    @SerializedName("original_language")
     val original_language: String = "en",
 
     @SerializedName("original_title")
@@ -27,7 +27,7 @@ data class Res (
     @SerializedName("title")
     val title: String,
 
-    @SerializedName ("overview")
+    @SerializedName("overview")
     val overview: String,
 
     @SerializedName("release_date")

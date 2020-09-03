@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScreenTwo"
-
     android:textAlignment="center"
-    >
+
+    tools:context=".ScreenTwo">
 
     <Button
         android:id="@+id/back"
@@ -46,7 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back"
         app:layout_constraintVertical_bias="0.02"
-        tools:listitem="@layout/screen_two"
-        />
+        tools:listitem="@layout/screen_two" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
