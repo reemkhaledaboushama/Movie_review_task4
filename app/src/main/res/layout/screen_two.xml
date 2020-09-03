@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back"
         app:layout_constraintVertical_bias="0.02"
-        tools:listitem="@layout/screen_twoo"
+        tools:listitem="@layout/screen_two"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
