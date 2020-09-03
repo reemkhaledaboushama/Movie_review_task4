@@ -1,4 +1,3 @@
-package com.reem.android.movie_review_task4
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import kotlinx.android.synthetic.main.movie_item.view.*
+import com.reem.android.movie_review_task4.Movie
+import com.reem.android.movie_review_task4.R
 
 
 class MovieAdaptor(private val context: Context): RecyclerView.Adapter<MovieAdaptor.MovieViewHolder>() {
@@ -17,9 +17,9 @@ class MovieAdaptor(private val context: Context): RecyclerView.Adapter<MovieAdap
     private var movieList: List<Movie> = listOf()
 
     class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var titletxt: TextView = itemView.movie_name
-        var yeartxt: TextView = itemView.movie_year
-        var image: ImageView = itemView.movie_image
+        var titletxt: TextView = itemView.findViewById(R.id.movie_name)
+        var yeartxt: TextView = itemView.findViewById(R.id.movie_year)
+        var image: ImageView = itemView.findViewById(R.id.movie_image)
 
     }
 
