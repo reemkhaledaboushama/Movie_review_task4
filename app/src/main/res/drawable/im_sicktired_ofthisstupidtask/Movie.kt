@@ -1,4 +1,4 @@
-package com.reem.android.movie_review_task4
+package com.yomna.im_sicktired_ofthisstupidtask
 
 import com.google.gson.annotations.SerializedName
 

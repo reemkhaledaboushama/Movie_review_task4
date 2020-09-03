@@ -1,5 +1,4 @@
-package com.reem.android.movie_review_task4
-
+package com.yomna.im_sicktired_ofthisstupidtask
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
